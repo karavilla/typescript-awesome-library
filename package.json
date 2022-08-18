@@ -1,0 +1,15 @@
+{
+  "name": "typescript-awesome-library",
+  "version": "1.0.0",
+  "description": "Typescript library",
+  "main": "main.js",
+  "types": "main.d.ts",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "author": "Karavilla",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}

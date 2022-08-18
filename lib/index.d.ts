@@ -1,0 +1,90 @@
+export declare enum LogSeverityId {
+    None = "None",
+    Error = "Error",
+    Warning = "Warning",
+    Info = "Info",
+    Debug = "Debug",
+    Trace = "Trace",
+    Fetal = "Fetal",
+    Security = "Security"
+}
+export declare enum LogEventTypeId {
+    None = "None",
+    Create = "Create",
+    Read = "Read",
+    Update = "Update",
+    Delete = "Delete",
+    Search = "Search",
+    Validation = "Validation",
+    Information = "Information",
+    Debug = "Debug",
+    Error = "Error",
+    Login = "Login",
+    Upload = "Upload",
+    Unauthorized = "Unauthorized",
+    Security = "Security",
+    Trace = "Trace"
+}
+export declare enum MessageTypes {
+    Error = "Error",
+    Warning = "Warning",
+    Information = "Information",
+    Validation = "Validation",
+    Debug = "Debug",
+    Trace = "Trace"
+}
+export declare enum EventTypes {
+    Error = "Error",
+    Warning = "Warning",
+    Information = "Information",
+    Validation = "Validation",
+    Debug = "Debug",
+    Trace = "Trace"
+}
+export declare enum AuthorizationTypes {
+    None = 0,
+    NoAuth = 1,
+    BearerToken = 2,
+    BasicAuth = 3,
+    DigestAuth = 4,
+    OAuth1_0 = 5,
+    OAuth2_0 = 6,
+    NTLM = 7
+}
+export declare enum EventStatuses {
+    None = "None",
+    Started = "Started",
+    Completed = "Completed",
+    Pending = "Pending",
+    Active = "Active",
+    Inactive = "Inactive",
+    Cancelled = "Cancelled",
+    Closed = "Closed",
+    NotStarted = "NotStarted",
+    Error = "Error",
+    ClientError = "ClientError",
+    ServerError = "ServerError"
+}
+/**
+* Creates a string that can be used for dynamic id attributes
+* Example:
+* @returns {string}
+*/
+export declare function generateId(): string;
+/**
+ * Class for System Event
+ * */
+export default class SystemEvent {
+    type: EventTypes;
+    text: string;
+    timestamp: number;
+    status?: EventStatuses;
+    /**
+     * Creates an Event
+     * @param text - Details of task
+     * @param type - Event type
+     * @param status - Event status
+     *
+     */
+    constructor(text: string, type: EventTypes, status?: EventStatuses);
+}
