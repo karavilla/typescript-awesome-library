@@ -71,20 +71,3 @@ export declare enum EventStatuses {
 * @returns {string}
 */
 export declare function generateId(): string;
-/**
- * Class for System Event
- * */
-export default class SystemEvent {
-    type: EventTypes;
-    text: string;
-    timestamp: number;
-    status?: EventStatuses;
-    /**
-     * Creates an Event
-     * @param text - Details of task
-     * @param type - Event type
-     * @param status - Event status
-     *
-     */
-    constructor(text: string, type: EventTypes, status?: EventStatuses);
-}
